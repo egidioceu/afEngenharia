@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: #071b36;
+  background: #050b14;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --spotlight-x: 50%;
+  --spotlight-y: 50%;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+::selection {
+  color: #050b14;
+  background: #f4b91f;
+}
+
+.section-kicker {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.65rem;
+  line-height: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-size: clamp(2.5rem, 5.5vw, 5.2rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+}
+
+.spotlight-card::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 280ms ease;
+  background: radial-gradient(
+    320px circle at var(--spotlight-x) var(--spotlight-y),
+    rgba(88, 181, 225, 0.15),
+    transparent 58%
+  );
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+.structural-fallback {
+  color: #58b5e1;
+  background:
+    linear-gradient(rgba(88, 181, 225, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 181, 225, 0.07) 1px, transparent 1px),
+    #050b14;
+  background-size: 32px 32px;
+}
+
+.form-control {
+  width: 100%;
+  min-height: 3.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0;
+  padding: 0.85rem 1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.035);
+  outline: none;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.form-control::placeholder {
+  color: rgba(231, 238, 244, 0.36);
+}
+
+.form-control:focus {
+  border-color: #58b5e1;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.form-control[aria-invalid="true"] {
+  border-color: #f4b91f;
+}
+
+select.form-control option {
+  color: #071b36;
+  background: #fff;
+}
+
+.form-error {
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  line-height: 1.1rem;
+  color: #ffd14f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

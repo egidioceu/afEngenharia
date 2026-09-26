@@ -93,7 +93,7 @@ export function Portfolio() {
                 className="absolute inset-0 z-20 h-full w-full cursor-ew-resize opacity-0"
               />
             </div>
-            <div className="mt-3 flex items-center justify-between font-mono text-[0.6rem] uppercase tracking-[0.16em] text-brand-steel">
+            <div className="mt-3 flex items-center justify-between font-mono text-[0.6rem] uppercase tracking-[0.16em] text-slate-600">
               <span>Modelo coordenado</span>
               <span>Registro de campo</span>
             </div>

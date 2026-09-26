@@ -189,7 +189,7 @@ export function Contact() {
                     </p>
                   )}
                 </div>
-                <span className="font-mono text-[0.58rem] text-white/35">
+                <span className="font-mono text-[0.58rem] text-white/70">
                   {form.details.length}/500
                 </span>
               </div>

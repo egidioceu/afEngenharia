@@ -142,7 +142,7 @@ function Footer() {
           >
             Instagram / @afengenhariaeprojetos
           </a>
-          <span className="font-mono text-[0.58rem] uppercase tracking-[0.14em] text-white/35">
+          <span className="font-mono text-[0.58rem] uppercase tracking-[0.14em] text-brand-line">
             © {new Date().getFullYear()} AF Engenharia & Projetos
           </span>
         </div>
